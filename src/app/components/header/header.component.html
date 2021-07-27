@@ -1,0 +1,22 @@
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+          <th scope="col" >מספר</th>
+          <th scope="col" >שם</th>
+          <th scope="col">שעה</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let client of customer">
+          <th clas="col-sm-2"scope="row">{{ client.Id }}</th>
+          <td class="col-sm-2">
+            {{ client.Name }}
+          </td>
+          <th clas="col-sm-2"scope="row">{{ client.Time }}</th>
+
+        </tr>
+        </tbody>
+      </table>
+</div>
+
