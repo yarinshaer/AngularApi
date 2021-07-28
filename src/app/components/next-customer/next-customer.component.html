@@ -1,0 +1,27 @@
+<div class="container">
+    <button type="button" (click)="getNextCustomer()" id="nextCustomer" class="btn btn-primary mb-2">התור הבא</button>
+    <hr />
+    <div class="form-group mx-sm-3 mb-2">
+        <h2>בטיפול</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="row">מספר</th>
+                    <th scope="row">שם</th>
+                    <th scope="row">שעה</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let client of customer">
+                  <th clas="col-sm-2"scope="row">{{ client.Id }}</th>
+                  <td class="col-sm-2">
+                    {{ client.Name }}
+                  </td>
+                  <th clas="col-sm-2"scope="row">{{ client.Time }}</th>
+        
+                </tr>
+                </tbody>
+        </table>
+    
+    </div>
+</div>

@@ -8,12 +8,16 @@ import { CustomPromisify } from 'util';
   providedIn: 'root'
 })
 export class CustomerApiService {
+ 
 
   private apiUrl= 'https://localhost:44351/Api/Customer';
   constructor( private http:HttpClient) { }
   getAllCustomers():Observable<Customer[]>
   {
     return this.http.get<Customer[]>(this.apiUrl+'/GetCustomersWaiting')
+  }
+  getNextCustomer():Observable<Customer[]> {
+    return this.http.post<Customer[]>(this.apiUrl+'/UpdateCustomer',null)
   }
 
   addNewCustomer(customer:string): Observable<Customer> {  

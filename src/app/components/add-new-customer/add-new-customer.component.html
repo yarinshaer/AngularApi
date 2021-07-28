@@ -1,42 +1,8 @@
-<form  (ngSubmit)="onSubmit(box.value)">
-    <input id="first-name" #box type="text" [(ngModel)]="firstName">
-    <input type="submit" placeholder="sdf">
-    </form>
-
-
-<button type="button" id="addCustomer" class="btn btn-primary mb-2">הכנס תור</button>
-
-<hr />
-<button type="button" id="nextCustomer" class="btn btn-primary mb-2">התור הבא</button>
-
-<hr />
-<div class="form-group mx-sm-3 mb-2">
-    <h2>בטיפול</h2>
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="row">מספר</th>
-                <th scope="row">שם</th>
-                <th scope="row">שעה</th>
-            </tr>
-        </thead>
-        <tbody id="customerBetipul">
-        </tbody>
-
-    </table>
-
+<div class="container">
+    <form  (ngSubmit)="onSubmit(box.value)">
+        <input id="first-name" #box type="text" [(ngModel)]="firstName">
+        <input class="btn btn-primary mb-2" type="submit" placeholder="sdf">
+        </form>
+    <hr />
+    
 </div>
-<hr />
-<h2> רשימת ממתינים</h2>
-<table class="table">
-    <thead>
-        <tr>
-            <th scope="col">מספר</th>
-            <th scope="col">שם</th>
-            <th scope="col">שעה</th>
-        </tr>
-    </thead>
-    <tbody id="tbodyCustomers">
-    </tbody>
-</table>
-

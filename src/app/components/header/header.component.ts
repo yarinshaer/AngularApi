@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CustomerApiService} from '../../services/share/customer-api.service'
 import {Customer} from '../../customer'
+import { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } from 'constants';
+import { time } from 'console';
 
 @Component({
   selector: 'app-header',
@@ -26,7 +28,10 @@ export class HeaderComponent implements OnInit {
     this.customerApi.getAllCustomers().subscribe(
       response => {
        this.customer =response;
-       console.log(response);
+       for(let i=0;i<response.length;i++)
+       {
+         response[i].Time= response[i].Time.toString().slice(0,5);
+       }
       },
       error => {
         console.log(error);

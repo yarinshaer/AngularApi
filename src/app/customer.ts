@@ -4,5 +4,5 @@ export interface Customer{
     Id:number,
     Name:string,
     status:number,
-    Time:Time
+    Time:String
 }
